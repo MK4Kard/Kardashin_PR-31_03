@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatsActivity"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lobby"
+        android:layout_width="match_parent"
+        android:layout_height="108sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@android:color/white"
+        android:elevation="8dp"
+        android:translationZ="4dp">
+        <LinearLayout
+            android:id="@+id/timePicker"
+            android:layout_width="54sp"
+            android:layout_height="21sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="21sp"
+            android:layout_marginTop="12sp">
+            <TextView
+                android:id="@+id/hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:textSize="11sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sep"
+                android:textColor="@color/gray"
+                android:textSize="11sp"/>
+            <TextView
+                android:id="@+id/minute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:textSize="11sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/wifi"
+            android:layout_width="69sp"
+            android:layout_height="14sp"
+            android:layout_marginTop="16sp"
+            app:layout_constraintStart_toEndOf="@+id/timePicker"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="201sp">
+            <View
+                android:layout_width="20sp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/network"/>
+            <View
+                android:layout_width="16sp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/wifi"
+                android:layout_marginStart="4sp"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/battery"
+                android:layout_marginStart="4sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/chats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="73sp"
+            android:text="@string/chats"
+            android:textColor="@color/gray2"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:layout_marginStart="14sp"
+            android:layout_marginTop="69sp"
+            android:background="@drawable/back"
+            android:onClick="signin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:layout_width="3.52sp"
+                android:layout_height="7.06sp"
+                android:layout_marginStart="8sp"
+                android:layout_marginTop="6.47sp"
+                android:background="@drawable/vector" />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:layout_marginStart="22sp"
+        android:layout_marginEnd="22sp"
+        android:layout_marginTop="20sp"
+        android:background="@drawable/lobby"
+        android:paddingStart="12sp"
+        android:hint="@string/search"
+        android:textColorHint="@color/gray2"
+        android:textSize="12sp"
+        android:paddingTop="12sp"
+        android:paddingBottom="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lobby" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24sp"
+        android:layout_marginEnd="24sp"
+        android:layout_marginTop="27sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="12dp"
+        android:clipToPadding="false"
+        android:paddingBottom="12dp">
+
+    </ListView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
