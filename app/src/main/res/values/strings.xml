@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Kardashin_b2_v3</string>
+    <string name="time">9:41</string>
+    <string name="welcome">Welcome Back</string>
+    <string name="text">Fill in your email and password to continue</string>
+    <string name="email">Email Address</string>
+    <string name="password">Password</string>
+    <string name="em_">***********@mail.com</string>
+    <string name="pass">***********</string>
+    <string name="remember">Remember password</string>
+    <string name="forgot">Forgot Password?</string>
+    <string name="login">Log in</string>
+    <string name="have">Already have an account?</string>
+    <string name="sign">Sign up</string>
+    <string name="or">or log in using</string>
+    <string name="sep">:</string>
+    <string name="chats">Chats</string>
+    <string name="search">Search for a driver</string>
+</resources>
